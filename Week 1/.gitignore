@@ -1,0 +1,6 @@
+# Only an idiot would commit 3204 files to github
+cacm
+/bin/
+.classpath
+.project
+*.csv
