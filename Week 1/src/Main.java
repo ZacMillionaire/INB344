@@ -8,11 +8,11 @@ public class Main {
 		
 		// Output data to csv
 		try(PrintWriter f = new PrintWriter("data.csv")){
-			f.write("Token, Count\n");
+			f.write("token, occurance, frequency\n");
 			t._tokenList.forEach((k,v) -> {
-				f.write(String.format("%s,%d\n",k,v));
+				f.write(String.format("%s,%d,%f\n",k,v,(float)v/t._uniqueTokenCount));
 			});
-			f.write("total,"+t._totalTokens);
+			f.write("total,"+t._uniqueTokenCount);
 		}
 		System.out.print("Finished");
 	}

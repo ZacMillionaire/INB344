@@ -70,7 +70,7 @@ public class Tokenize {
 		// Can't use (.*?)[,\s] because then I don't get the last match
 		// (or only match) on a line.
 		// Why? Who knows! Above regex would work fine in any other language.
-		String p = "([\\w\\.\\-\\<\\>]+)"; // include html tags and hyphenated words
+		String p = "([\\w\\.\\-\\<\\>]+){2,}"; // include html tags and hyphenated words
 		Pattern regex = Pattern.compile(p);
 		Matcher matches = regex.matcher(l);
 		
